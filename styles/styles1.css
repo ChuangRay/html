@@ -36,7 +36,7 @@ html {
 #submit{
 	position: relative;
 	padding: 10px 10px 10px 10px;
-	left: 70%;
+	margin: right auto;
 }
 
 h6 {
