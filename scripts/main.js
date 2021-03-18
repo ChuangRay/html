@@ -1,5 +1,6 @@
 changelist1();
 changelist2();
+check();
 
 function changelist1()
 {
@@ -26,3 +27,23 @@ function changelist2()
             break;
       }
 }         
+
+function check()
+{
+     if(reg.username.value == "") 
+     {
+         alert("未輸入姓名");
+     }
+                
+     else if(reg.year.value == "" || reg.month.value == "00" || reg.day.value == "00")
+     {
+         alert("未輸入完整生日日期");
+     }
+                
+     else if(!reg.sex[0].checked && !reg.sex[1].checked)
+     {
+         alert("未選擇性別");
+     }
+                
+         else reg.submit();
+}
