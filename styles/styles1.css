@@ -12,17 +12,18 @@ html {
 	width: auto;
 	height: 80px;
 	background-color: #006F72;
-	padding: 20px 0 0 0;
+	/*padding: 20px 0 0 0;*/
 	margin: 0 auto;
 }
 
 #main {
 	position: relative;
-	width: 700px; /*310px 80%*/
+	width: 90%; /*310px 80%*/
+	max-width: 700px;
 	margin: 20px auto;
 	background-color: #FFFFFF;
 	border-radius: 20px 20px 20px 20px;
-	padding: 20px 0 20px 0;
+	padding: 20px 0;
 }
 
 #logo {
@@ -30,13 +31,13 @@ html {
 	max-width: 150px;
 	display: block;
   	margin: 0 auto;
-	padding: 10px 10px 10px 10px;
 }
 
 #submit{
 	position: relative;
-	padding: 10px 10px 10px 10px;
-	margin: right auto;
+	margin: 0 auto;
+	top: 10px;
+	left: 50%;
 }
 
 h6 {
