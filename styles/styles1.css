@@ -34,9 +34,16 @@ textarea {  -webkit-appearance: none;}
 
 #logo {
 	position: relative;
-	max-width: 200px;
+	max-width: 150px;
 	display: block;
   	margin: 10px auto;
+}
+
+#submit{
+	position: relative;
+	margin: 10px 80%;
+	display: block;
+	font-size: 18px;
 }
 
 input {
@@ -55,8 +62,6 @@ input {
 	border-radius: 5px;
 	padding: 5px 10px;
 	cursor: pointer;
-	margin: 10px 80%;
-	position: relative;
 }
 
 h6 {
