@@ -6,17 +6,21 @@
 		<title>實名制登記</title>
 		<link rel="stylesheet" href="styles/styles1.css">
 		<link rel="preconnect" href="https://fonts.gstatic.com">
-		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+  		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro">
+  		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quattrocento+Sans">
+  		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 	</head>
 	<body>
+		<script src="scripts/main.js"></script>
 		<div id="top">
 			<div id="main">
 				<img src="images/logo-2.png" alt="logo" id="logo">
-				<form>
+				<form name=data>
 
 				<ol>
-				<h3>基本資料</h3>
+				<h6>基本資料</h6>
 					<li>姓名：<input type="text" name="name" style="width: 180px;" ><br></li>
 					<li>聯絡電話：<input type='text' name="phone" style="width: 146px;" ><br></li>
 					<li>電子郵件：<input type='text' name="email" style="width: 146px;" ><br></li>
@@ -24,37 +28,38 @@
 					<li>受訪單位：<input type='text' name="invite" style="width: 146px;" ><br></li>
 					<li>接待窗口/聯絡人：<input type='text' name="reception" style="width: 88px;" ><br></li>
 				
-				<h3>出入境旅遊史</h3>
-					<li>近一個月內有無出國？<br>
-					<INPUT type=radio name=abroad value=YES>是<br>
-					<INPUT type=radio name=abroad value=NO>否<br>
-					</li>
-
+				<h6>出入境旅遊史</h6>                                                             
+					<li>近一個月內有無出國？<br></li>
+					<INPUT type=radio name=abroad value=YES onChange=Javascript:changelist();>是<br>
+					<div id=abroad_q></div>
+					<INPUT type=radio name=abroad value=NO onChange=Javascript:changelist();>否<br>
+					
 				<h3>相關症狀</h3>
 					<li>最近 14 天內是否出現以下症狀？<br> (複選) <br></li>
-					<INPUT type=checkbox name=interst value=發燒>發燒(額溫 ≧37.5°C)<br>
-					<INPUT type=checkbox name=interst value=咳嗽>咳嗽<br>
-					<INPUT type=checkbox name=interst value=喉嚨痛>喉嚨痛<br>
-					<INPUT type=checkbox name=interst value=呼吸急促>呼吸急促、呼吸困難<br>
-					<INPUT type=checkbox name=interst value=流鼻水>流鼻水<br>
-					<INPUT type=checkbox name=interst value=肌肉或關節酸痛>肌肉或關節酸痛<br>
-					<INPUT type=checkbox name=interst value=四肢無力>四肢無力<br>
-					<INPUT type=checkbox name=interst value=其他>其他 <input type="text" name="其他症狀:"><br>
-					<INPUT type=checkbox name=interst value=無>無<br>
+					<INPUT type=checkbox name=ill_1 value=發燒>發燒(額溫 ≧37.5°C)<br>
+					<INPUT type=checkbox name=ill_2 value=咳嗽>咳嗽<br>
+					<INPUT type=checkbox name=ill_3 value=喉嚨痛>喉嚨痛<br>
+					<INPUT type=checkbox name=ill_4 value=呼吸急促>呼吸急促、呼吸困難<br>
+					<INPUT type=checkbox name=ill_5 value=流鼻水>流鼻水<br>
+					<INPUT type=checkbox name=ill_6 value=肌肉或關節酸痛>肌肉或關節酸痛<br>
+					<INPUT type=checkbox name=ill_7 value=四肢無力>四肢無力<br>
+					<INPUT type=checkbox name=ill_8 value=其他>其他 <input type="text" name="其他症狀:"><br>
+					<INPUT type=checkbox name=ill_9 value=無>無<br>
+
 				<h3>接觸史</h3>
 					<li>您身邊是否有其他 2 人以上出現類流感症狀？<br></li>
-					<INPUT type=radio name=contact1 value=YES>是<br>
-					<INPUT type=radio name=contact1 value=NO>否<br>
+					<INPUT type=radio name=contact_1 value=YES>是<br>
+					<INPUT type=radio name=contact_1 value=NO>否<br>
 					</li>
 
 					<li>您或您家屬是否曾與感染「新冠肺炎」病患有接觸？<br></li>
-					<INPUT type=radio name=contact2 value=YES>是<br>
-					<INPUT type=radio name=contact2 value=NO>否<br>
+					<INPUT type=radio name=contact_2 value=YES>是<br>
+					<INPUT type=radio name=contact_2 value=NO>否<br>
 					</li>
 
 					<li>您是否為衛生主管機關列管之「新冠肺炎」居家隔離個案？<br></li>
-					<INPUT type=radio name=contact3 value=YES>是<br>
-					<INPUT type=radio name=contact3 value=NO>否<br>
+					<INPUT type=radio name=contact_3 value=YES>是<br>
+					<INPUT type=radio name=contact_3 value=NO>否<br>
 					</li>
 
 				</ol>	
