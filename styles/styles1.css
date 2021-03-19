@@ -60,20 +60,20 @@ input {
 }
 
 h6 {
-	font-size: 22px;
+	font-size: 25px;
 	margin: 20px 0 5px 0;
 	letter-spacing: 1px;
 	text-align: left;
 }
 
 body {
-	font-size: 18px;
  	margin: 0 auto;
  	letter-spacing: 1px;
  	text-align: left;
 }
 
-p, ol {
+p, li {
+	font-size: 18px;
   	text-align: left;
   	line-height: 2;
   	letter-spacing: 1px;
