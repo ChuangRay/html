@@ -24,7 +24,7 @@ textarea {  -webkit-appearance: none;}
 
 #main {
 	position: relative;
-	width: 95%; /*310px 80%*/
+	width: 90%; /*310px 80%*/
 	max-width: 700px;
 	margin: 20px auto;
 	background-color: #FFFFFF;
@@ -55,7 +55,7 @@ input {
 	border-radius: 5px;
 	padding: 3px 10px;
 	cursor: pointer;
-	margin: 10px 80%;
+	margin: 10px 0 10px 80%;
 	position: relative;
 }
 
