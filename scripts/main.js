@@ -40,8 +40,7 @@ function check()
 
     else if(!((/^09\d{8}$/).test(data.phone.value)))
          tex=tex+"『聯絡電話』格式有誤！\n";
-
-                
+            
     if(data.email.value == "")
          tex=tex+"請輸入『電子郵件』\n";
 
