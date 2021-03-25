@@ -14,7 +14,7 @@ header("Content-Type:text/html; charset=utf-8");
     // Obtain last inserted id
     $last_id = $mysqli->insert_id;
     echo "Records inserted successfully. Last inserted ID is: " . $last_id;
-    $query = "INSERT INTO ID (id) VALUES ('$last_id')";
+    $query = "INSERT INTO ID (id) VALUES ('$last_id+1')";
     mysql_query($query) or die("無法送出" . mysql_error( ));
 
     $query = "INSERT INTO personal_info (name,phone,email,unit) VALUES ('$name','$phone','$email','$department')";
