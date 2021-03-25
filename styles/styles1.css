@@ -1,17 +1,9 @@
 html {
  	width: auto;
- 	background-color: #C1DCDD;
+ 	/*background-color: #C1DCDD;*/
   	font-family: 'Noto Sans TC', sans-serif;
   	margin: 0 auto;
 }
-
-input[type="button"], input[type="submit"], input[type="reset"] {
-	-webkit-appearance: none;
-}
-.button{ border-radius: 0; } 
-
-textarea {  -webkit-appearance: none;}   
-
 
 #top{
 	position: relative;
@@ -68,6 +60,7 @@ h6 {
 
 body {
  	margin: 0 auto;
+ 	background-color: #C1DCDD;
  	letter-spacing: 1px;
  	text-align: left;
 }
