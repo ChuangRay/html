@@ -10,23 +10,22 @@ header("Content-Type:text/html; charset=utf-8");
   $email = mysql_real_escape_string($_POST['email']);
   $department = mysql_real_escape_string($_POST['department']);
 
-  if($mysqli->query($sql) === true){
+if(mysqli_query($link, $sql)){
     // Obtain last inserted id
-    $last_id = $mysqli->insert_id;
-    echo "Records inserted successfully. Last inserted ID is: " . $last_id;
-    $query = "INSERT INTO ID (id) VALUES ('$last_id'+1)";
-    mysql_query($query) or die("無法送出" . mysql_error( ));
-
-    $query = "INSERT INTO personal_info (name,phone,email,unit) VALUES ('$name','$phone','$email','$department')";
+  $last_id = mysqli_insert_id($link);
+  echo "Records inserted successfully. Last inserted ID is: " . $last_id;
+  $query = "INSERT INTO ID (id) VALUES ('$last_id'+1)";
   mysql_query($query) or die("無法送出" . mysql_error( ));
 
-  } else{
-    echo "ERROR: Could not able to execute $sql. " . $mysqli->error;
-  }
+  $query = "INSERT INTO personal_info (name,phone,email,unit) VALUES ('$name','$phone','$email','$department')";
+  mysql_query($query) or die("無法送出" . mysql_error( ));
+
+} else{
+    echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+}
 
 
-
-  $mysqli->close();
+  mysqli_close($link);
 
   $url = "index.html";
   echo "<script>";
