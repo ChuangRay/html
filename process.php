@@ -10,7 +10,7 @@ header("Content-Type:text/html; charset=utf-8");
   $email = mysql_real_escape_string($_POST['email']);
   $department = mysql_real_escape_string($_POST['department']);
 
-  $query = "INSERT INTO personal_info (name,phone,email,unit,id) VALUES ('$name','$phone','$email','$department','1');
+  $query = "INSERT INTO personal_info (name,phone,email,unit,id) VALUES ('$name','$phone','$email','$department','1')";
   mysql_query($query) or die("無法送出" . mysql_error( ));
 
   mysqli_close($link);
