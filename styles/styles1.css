@@ -48,12 +48,6 @@ input {
     padding: 2px 2px;
 }
 
--webkit-datetime-edit-text { 
-	font-size: 18px; 
-	background-color: #E4E4E4;
-	padding: 2px 2px;
-} 
-
 .btn {
 	background: #006F72;
 	color: #fff;
