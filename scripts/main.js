@@ -49,7 +49,7 @@ function check()
          tex=tex+"『電子郵件』格式有誤！\n";
 
 
-    if(data.unit.value == "") 
+    if(data.department.value == "") 
          tex=tex+"請輸入『所屬單位』\n";
 
                 
