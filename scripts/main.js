@@ -28,10 +28,12 @@ function changelist2()
       }
 }         
 
+
 function check()
 {
     var tex = "";
 
+/*
     if(data.name.value == "")
         tex=tex+"請輸入『姓名』\n";
                 
@@ -104,6 +106,7 @@ function check()
             tex=tex+"請完成『接觸史問卷』\n";
     }
 
+*/
     if(tex ==""){
         data.submit();
     }

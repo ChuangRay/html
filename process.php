@@ -7,14 +7,27 @@ header("Content-Type:text/html; charset=utf-8");
   //二、執行SQL語法
   $name = mysql_real_escape_string($_POST['name']);
   $phone = mysql_real_escape_string($_POST['phone']);
-  //在html的name上面寫什麼這邊就宣告什麼，後面POST是資料庫欄位
-  // 建立SQL語法，使用$query
-    $query = "INSERT INTO ID (id) VALUES ('1')";
-    //$query = "INSERT INTO personal_info (name) VALUES ('$name')";
-//$query = "insert into 資料表名稱(資料表欄位,資料表欄位2) values ('輸入值1','輸入值2'); 由於html欄位name=account，這邊就也是$account（已宣告過）
-  //送出SQL語法到資料庫系統
+  $name = mysql_real_escape_string($_POST['email']);
+  $phone = mysql_real_escape_string($_POST['department']);
+
+  if($mysqli->query($sql) === true){
+    // Obtain last inserted id
+    $last_id = $mysqli->insert_id;
+    echo "Records inserted successfully. Last inserted ID is: " . $last_id;
+    $query = "INSERT INTO ID (id) VALUES ('$last_id')";
+    mysql_query($query) or die("無法送出" . mysql_error( ));
+
+    $query = "INSERT INTO personal_info (name,phone,email,unit) VALUES ('$name','$phone','$email','$department')";
   mysql_query($query) or die("無法送出" . mysql_error( ));
-//下方javascript，用來回首頁，javascript在php中需要使用echo來輸出
+
+  } else{
+    echo "ERROR: Could not able to execute $sql. " . $mysqli->error;
+  }
+
+
+
+  $mysqli->close();
+
   $url = "index.html";
   echo "<script>";
   echo "window.location.href='$url'";
