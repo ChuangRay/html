@@ -1,5 +1,6 @@
 html {
  	width: auto;
+ 	-webkit-print-color-adjust: exact; 
  	background-color: #C1DCDD;
   	font-family: 'Noto Sans TC', sans-serif;
   	margin: 0 auto;
@@ -67,10 +68,6 @@ h6 {
 
 body {
  	margin: 0 auto;
-<<<<<<< HEAD
- 	background-color: #C1DCDD; /*C1DCDD*/
-=======
->>>>>>> parent of caa38f8 (1.5)
  	letter-spacing: 1px;
  	text-align: left;
 }
