@@ -15,7 +15,7 @@ if(mysqli_query($link, $sql)){
   $last_id = mysqli_insert_id($link);
   echo "Records inserted successfully. Last inserted ID is: " . $last_id;
 
-  $query = "INSERT INTO personal_info (name,phone,email,unit,id) VALUES ('$name','$phone','$email','$department',('$last_id'+1))";
+  $query = "INSERT INTO personal_info (name,phone,email,unit,id) VALUES ('$name','$phone','$email','$department','1'";
   mysql_query($query) or die("無法送出" . mysql_error( ));
 
 } else{
