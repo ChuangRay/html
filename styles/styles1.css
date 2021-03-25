@@ -1,9 +1,16 @@
 html {
  	width: auto;
- 	/*background-color: #C1DCDD;*/
+ 	background-color: #C1DCDD;
   	font-family: 'Noto Sans TC', sans-serif;
   	margin: 0 auto;
 }
+
+input[type="button"], input[type="submit"], input[type="reset"] {
+	-webkit-appearance: none;
+}
+
+textarea {  -webkit-appearance: none;}   
+
 
 #top{
 	position: relative;
@@ -60,7 +67,10 @@ h6 {
 
 body {
  	margin: 0 auto;
+<<<<<<< HEAD
  	background-color: #C1DCDD; /*C1DCDD*/
+=======
+>>>>>>> parent of caa38f8 (1.5)
  	letter-spacing: 1px;
  	text-align: left;
 }
