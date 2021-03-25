@@ -13,13 +13,13 @@ header("Content-Type:text/html; charset=utf-8");
   $reception = mysql_real_escape_string($_POST['reception']);
   //在html的name上面寫什麼這邊就宣告什麼，後面POST是資料庫欄位
   // 建立SQL語法，使用$query
-  $query = "INSERT INTO personal_info (name,phone,email,department,invite,reception) VALUES ('$name','$phone','$email','$unit')";
+  $query = "INSERT INTO personal_info (name,phone,email,uint) VALUES ('$name','$phone','$email','$unit')";
 //$query = "insert into 資料表名稱(資料表欄位,資料表欄位2) values ('輸入值1','輸入值2'); 由於html欄位name=account，這邊就也是$account（已宣告過）
   //送出SQL語法到資料庫系統
   mysql_query($query) or die("無法送出" . mysql_error( ));
 //下方javascript，用來回首頁，javascript在php中需要使用echo來輸出
   $url = "index.html";
-  echo "<script type='scripts/main.js'>";
+  echo "<script>";
   echo "window.location.href='$url'";
   echo "</script>"; 
 ?>
