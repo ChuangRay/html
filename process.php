@@ -1,7 +1,7 @@
 <?php
 header("Content-Type:text/html; charset=utf-8");
   //建立連線：
-  $link = mysql_pconnect("localhost", "root", "estinet"); //$link宣告連線，mysql_pconnet("主機名稱","資料庫帳號","資料庫密碼");
+  $link = mysql_pconnect("192.168.2.39", "root", "estinet"); //$link宣告連線，mysql_pconnet("主機名稱","資料庫帳號","資料庫密碼");
   //選擇資料庫：
   mysql_select_db("mydb") or die("無法選擇資料庫"); // 選擇資料庫：mysql_select_db("資料庫名稱") or die ("失敗顯示字");
   //二、執行SQL語法
@@ -15,7 +15,7 @@ header("Content-Type:text/html; charset=utf-8");
   mysql_query($query) or die("無法送出" . mysql_error( ));
 //下方javascript，用來回首頁，javascript在php中需要使用echo來輸出
   $url = "index.html";
-  echo "<script type='text/javascript'>";
+  echo "<script type='scripts/main.js'>";
   echo "window.location.href='$url'";
   echo "</script>"; 
 ?>
