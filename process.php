@@ -7,8 +7,8 @@ header("Content-Type:text/html; charset=utf-8");
   //二、執行SQL語法
   $name = mysql_real_escape_string($_POST['name']);
   $phone = mysql_real_escape_string($_POST['phone']);
-  $name = mysql_real_escape_string($_POST['email']);
-  $phone = mysql_real_escape_string($_POST['department']);
+  $email = mysql_real_escape_string($_POST['email']);
+  $department = mysql_real_escape_string($_POST['department']);
 
   if($mysqli->query($sql) === true){
     // Obtain last inserted id
