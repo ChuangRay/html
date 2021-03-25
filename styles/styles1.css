@@ -39,6 +39,13 @@ textarea {  -webkit-appearance: none;}
   	margin: 10px auto;
 }
 
+.mydate {
+	outline-style: none ;
+	background-color: #E4E4E4;
+    font-size: 18px;
+    padding: 0;
+}
+
 input {
 	outline-style: none ;
     border: 0; 
